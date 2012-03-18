@@ -1,0 +1,78 @@
+[Environment]
+duration=128.000000
+seed=600
+net_name=REDES_RIP-COM_FALHA
+sim_log_delim=TAB
+
+[Run Info]
+run_date=18:39:26 Mon Nov 14 2011
+
+[Log Entries]
+0	346	Campus Network.node_0	Results	RIP	Performance	SYMPTOM(S): <NL>  1. No RIP routing updates past a certain <NL>  simulation time. <NL>  2. Lower than expected throughput or <NL>  utilization of the links. <NL>   <NL> CAUSE(S): <NL>  "RIP Sim Efficiency" simulation attribute <NL>  is set to "Enabled". <NL>   <NL> SUGGESTIONS: <NL>  Set "RIP Sim Efficiency" simulation <NL>  attribute to "Disabled". <NL>  
+5.00006107388	686	Campus Network.net5	Protocol	UDP	Packet Drop	SYMPTOM(S): <NL>  Discarding UDP datagram received (destined <NL>  for port number: 520) <NL>   <NL>  It is typical for end nodes (e.g., wkstn <NL>  and servers) to discard datagrams containing <NL>  RIP messages (i.e., port 520) and LDP (Label  <NL>  Distribution Protocol, port 646) messages.   <NL>  In that case, this message can be ignored. <NL>   <NL> EFFECT(S): <NL>  1. The datagram is discarded by the UDP. <NL>  2. Application data may not be received. <NL>  3. No Effects if the datagram was received <NL>     for port 520 and node is not using RIP. <NL>  4. No Effects if the datagram was received <NL>     for port 646 and node is not MPLS enabled. <NL>   <NL> SUGGESTIONS: <NL>  Make sure that the applications are <NL>  sending packets to a port that UDP <NL>  is listening on. <NL>   <NL>  This message will not be repeated. <NL>  
+600	23925	Campus Network.node_0	Results	IP	Route Table	COMMON ROUTE TABLE snapshot for: <NL>   <NL>   Router name: Campus Network.node_0 <NL>       at time: 600.00 seconds <NL>   <NL> ROUTE TABLE contents: <NL>   <NL>    Dest. Address     Subnet Mask       Next Hop       Interface Name    Metric      Protocol    Insertion Time <NL>   ---------------  ---------------  ---------------  ---------------    ------      --------    -------------- <NL>   <NL>   192.0.0.0        255.255.255.0    192.0.0.2         IF0               0            Direct           0.000 <NL>   192.0.1.0        255.255.255.0    192.0.1.2         IF1               0            Direct           0.000 <NL>   192.0.2.0        255.255.255.0    192.0.2.1         IF10              0            Direct           0.000 <NL>   192.0.3.0        255.255.255.0    192.0.3.1         IF11              0            Direct           0.000 <NL>   192.0.4.0        255.255.255.0    192.0.4.1         Loopback          0            Direct           0.000 <NL>   192.0.9.0        255.255.255.0    192.0.2.2         IF10              1            RIP              5.000 <NL>   192.0.10.0       255.255.255.0    192.0.2.2         IF10              1            RIP              5.000 <NL>   192.0.11.0       255.255.255.0    192.0.2.2         IF10              1            RIP              5.000 <NL>   192.0.12.0       255.255.255.0    192.0.2.2         IF10              1            RIP              5.000 <NL>   192.0.13.0       255.255.255.0    192.0.2.2         IF10              2            RIP              125.000 <NL>   192.0.14.0       255.255.255.0    192.0.2.2         IF10              2            RIP              125.000 <NL>   192.0.15.0       255.255.255.0    192.0.2.2         IF10              2            RIP              125.000 <NL>   192.0.5.0        255.255.255.0    192.0.3.2         IF11              1            RIP              215.000 <NL>   192.0.6.0        255.255.255.0    192.0.3.2         IF11              1            RIP              215.000 <NL>   192.0.7.0        255.255.255.0    192.0.3.2         IF11              1            RIP              215.000 <NL>   192.0.8.0        255.255.255.0    192.0.3.2         IF11              1            RIP              215.000 <NL>   <NL> The gateway of last resort is not set <NL>   <NL>   <NL> NOTE: In order to view the individual routing tables maintained <NL>   by various dynamic routing protocols (e.g., OSPF and RIP), you <NL>   can set the simulation attribute "IP Routing Table Export/Import" <NL>   to "Export" to generate a network-wide routing table/protocol output. <NL>  
+600	23929	Campus Network.node_1	Results	IP	Route Table	COMMON ROUTE TABLE snapshot for: <NL>   <NL>   Router name: Campus Network.node_1 <NL>       at time: 600.00 seconds <NL>   <NL> ROUTE TABLE contents: <NL>   <NL>    Dest. Address     Subnet Mask       Next Hop       Interface Name    Metric      Protocol    Insertion Time <NL>   ---------------  ---------------  ---------------  ---------------    ------      --------    -------------- <NL>   <NL>   192.0.5.0        255.255.255.0    192.0.5.2         IF0               0            Direct           0.000 <NL>   192.0.6.0        255.255.255.0    192.0.6.2         IF1               0            Direct           0.000 <NL>   192.0.7.0        255.255.255.0    192.0.7.1         IF10              0            Direct           0.000 <NL>   192.0.3.0        255.255.255.0    192.0.3.2         IF11              0            Direct           0.000 <NL>   192.0.8.0        255.255.255.0    192.0.8.1         Loopback          0            Direct           0.000 <NL>   192.0.11.0       255.255.255.0    192.0.7.2         IF10              1            RIP              5.000 <NL>   192.0.13.0       255.255.255.0    192.0.7.2         IF10              1            RIP              5.000 <NL>   192.0.14.0       255.255.255.0    192.0.7.2         IF10              1            RIP              5.000 <NL>   192.0.15.0       255.255.255.0    192.0.7.2         IF10              1            RIP              5.000 <NL>   192.0.9.0        255.255.255.0    192.0.7.2         IF10              2            RIP              8.161 <NL>   192.0.10.0       255.255.255.0    192.0.7.2         IF10              2            RIP              8.161 <NL>   192.0.12.0       255.255.255.0    192.0.7.2         IF10              2            RIP              8.161 <NL>   192.0.0.0        255.255.255.0    192.0.3.1         IF11              1            RIP              215.000 <NL>   192.0.1.0        255.255.255.0    192.0.3.1         IF11              1            RIP              215.000 <NL>   192.0.2.0        255.255.255.0    192.0.3.1         IF11              1            RIP              215.000 <NL>   192.0.4.0        255.255.255.0    192.0.3.1         IF11              1            RIP              215.000 <NL>   <NL> The gateway of last resort is not set <NL>   <NL>   <NL> NOTE: In order to view the individual routing tables maintained <NL>   by various dynamic routing protocols (e.g., OSPF and RIP), you <NL>   can set the simulation attribute "IP Routing Table Export/Import" <NL>   to "Export" to generate a network-wide routing table/protocol output. <NL>  
+600	23933	Campus Network.node_2	Results	IP	Route Table	COMMON ROUTE TABLE snapshot for: <NL>   <NL>   Router name: Campus Network.node_2 <NL>       at time: 600.00 seconds <NL>   <NL> ROUTE TABLE contents: <NL>   <NL>    Dest. Address     Subnet Mask       Next Hop       Interface Name    Metric      Protocol    Insertion Time <NL>   ---------------  ---------------  ---------------  ---------------    ------      --------    -------------- <NL>   <NL>   192.0.9.0        255.255.255.0    192.0.9.2         IF0               0            Direct           0.000 <NL>   192.0.10.0       255.255.255.0    192.0.10.2        IF1               0            Direct           0.000 <NL>   192.0.2.0        255.255.255.0    192.0.2.2         IF10              0            Direct           0.000 <NL>   192.0.11.0       255.255.255.0    192.0.11.1        IF11              0            Direct           0.000 <NL>   192.0.12.0       255.255.255.0    192.0.12.1        Loopback          0            Direct           0.000 <NL>   192.0.0.0        255.255.255.0    192.0.2.1         IF10              1            RIP              5.000 <NL>   192.0.1.0        255.255.255.0    192.0.2.1         IF10              1            RIP              5.000 <NL>   192.0.4.0        255.255.255.0    192.0.2.1         IF10              1            RIP              5.000 <NL>   192.0.7.0        255.255.255.0    192.0.11.2        IF11              1            RIP              5.000 <NL>   192.0.13.0       255.255.255.0    192.0.11.2        IF11              1            RIP              5.000 <NL>   192.0.14.0       255.255.255.0    192.0.11.2        IF11              1            RIP              5.000 <NL>   192.0.15.0       255.255.255.0    192.0.11.2        IF11              1            RIP              5.000 <NL>   192.0.5.0        255.255.255.0    192.0.11.2        IF11              2            RIP              8.161 <NL>   192.0.6.0        255.255.255.0    192.0.11.2        IF11              2            RIP              8.161 <NL>   192.0.8.0        255.255.255.0    192.0.11.2        IF11              2            RIP              8.161 <NL>   192.0.3.0        255.255.255.0    192.0.2.1         IF10              1            RIP              201.200 <NL>   <NL> The gateway of last resort is not set <NL>   <NL>   <NL> NOTE: In order to view the individual routing tables maintained <NL>   by various dynamic routing protocols (e.g., OSPF and RIP), you <NL>   can set the simulation attribute "IP Routing Table Export/Import" <NL>   to "Export" to generate a network-wide routing table/protocol output. <NL>  
+600	23937	Campus Network.node_3	Results	IP	Route Table	COMMON ROUTE TABLE snapshot for: <NL>   <NL>   Router name: Campus Network.node_3 <NL>       at time: 600.00 seconds <NL>   <NL> ROUTE TABLE contents: <NL>   <NL>    Dest. Address     Subnet Mask       Next Hop       Interface Name    Metric      Protocol    Insertion Time <NL>   ---------------  ---------------  ---------------  ---------------    ------      --------    -------------- <NL>   <NL>   192.0.13.0       255.255.255.0    192.0.13.2        IF0               0            Direct           0.000 <NL>   192.0.14.0       255.255.255.0    192.0.14.2        IF1               0            Direct           0.000 <NL>   192.0.11.0       255.255.255.0    192.0.11.2        IF10              0            Direct           0.000 <NL>   192.0.7.0        255.255.255.0    192.0.7.2         IF11              0            Direct           0.000 <NL>   192.0.15.0       255.255.255.0    192.0.15.1        Loopback          0            Direct           0.000 <NL>   192.0.5.0        255.255.255.0    192.0.7.1         IF11              1            RIP              5.000 <NL>   192.0.6.0        255.255.255.0    192.0.7.1         IF11              1            RIP              5.000 <NL>   192.0.8.0        255.255.255.0    192.0.7.1         IF11              1            RIP              5.000 <NL>   192.0.2.0        255.255.255.0    192.0.11.1        IF10              1            RIP              5.000 <NL>   192.0.9.0        255.255.255.0    192.0.11.1        IF10              1            RIP              5.000 <NL>   192.0.10.0       255.255.255.0    192.0.11.1        IF10              1            RIP              5.000 <NL>   192.0.12.0       255.255.255.0    192.0.11.1        IF10              1            RIP              5.000 <NL>   192.0.0.0        255.255.255.0    192.0.11.1        IF10              2            RIP              125.000 <NL>   192.0.1.0        255.255.255.0    192.0.11.1        IF10              2            RIP              125.000 <NL>   192.0.4.0        255.255.255.0    192.0.11.1        IF10              2            RIP              125.000 <NL>   192.0.3.0        255.255.255.0    192.0.7.1         IF11              1            RIP              201.853 <NL>   <NL> The gateway of last resort is not set <NL>   <NL>   <NL> NOTE: In order to view the individual routing tables maintained <NL>   by various dynamic routing protocols (e.g., OSPF and RIP), you <NL>   can set the simulation attribute "IP Routing Table Export/Import" <NL>   to "Export" to generate a network-wide routing table/protocol output. <NL>  
+
+[Summary]
+Low-Lev.	Simulation	Error	0
+Config.	RIP	Attribute Settings	0
+Config.	RIP	Neighbor Modules	0
+Config.	UDP	Neighbor Modules	0
+Protocol	RIP	Timeouts	0
+Protocol	UDP	Packet Drop	1
+Results	RIP	Performance	1
+Low-Lev.	UDP	LLM Related	0
+Low-Lev.	UDP	Create Local Port	0
+Low-Lev.	RIP	Create UDP Receive Port	0
+Config.	RIP	Routing Table Configuration	0
+Protocol	IP	Higher Layer Protocol Register	0
+Low-Lev.	TCP	Kernel_Error	0
+Config.	TCP	Setup	0
+Protocol	TCP	Data_Transmission	0
+Config.	Transport_Interface	Setup	0
+Protocol	Transport_Interface	Data_Transmission	0
+Results	Transport_Interface	No_Results	0
+Config.	LAN Nodes	Warning	0
+Protocol	LAN Nodes	Protocol Warning	0
+Results	LAN Nodes	Performance	0
+Low-Lev.	IP	Address_Mapping_via_NATO	0
+Protocol	IP	Protocol_Error	0
+Protocol	IP	Protocol_Warning	0
+Config.	IP	Model_Configuration_Error	0
+Config.	IP	Model_Configuration_Warning	0
+Low-Lev.	IP	KP_Invocation_Error	0
+Results	IP	Unexpected_Results	0
+Protocol	IP	Packet Drop	0
+Protocol	IP	Wireless2Intf_Auto_Assignment_Warning	0
+Protocol	IP	Static_Auto_Assignment_Warning	0
+Protocol	OSPF	Protocol_Error	0
+Protocol	OSPF	Protocol_Warning	0
+Config.	OSPF	Model_Configuration_Error	0
+Config.	OSPF	Model_Configuration_Warning	0
+Low-Lev.	OSPF	KP_Invocation_Error	0
+Results	OSPF	Unexpected_Results	0
+Protocol	OSPF	LSDB_Export	0
+Protocol	BGP	Protocol_Error	0
+Protocol	BGP	Protocol_Warning	0
+Config.	BGP	Model_Configuration_Error	0
+Config.	BGP	Model_Configuration_Warning	0
+Results	BGP	Unexpected_Results	0
+Results	IP	Route Table	4
+Config.	Ethernet	Model Configuration	0
+Protocol	Ethernet	Packet Drop	0
+Results	Ethernet	Performance	0
+Results	Ethernet	No Results	0
+Results	ICMP	Performance	0
+Protocol	ICMP	Timeout	0
+Config.	IGMP Host	Model_Configuration_Warning	0
+Low-Lev.	IGMP Host	Model_Internals_Error	0
+Protocol	RSVP	Model Configuration Error	0
+Config.	Application	Setup	0
+Protocol	Application	Cli-Svr	0
+Results	Application	No Results	0
+Results	Application	Invalid Results	0
+Results	Application	Traffic Generation	0
+Config.	Application	Background Traffic	0
+Config.	SIP	Signaling	0

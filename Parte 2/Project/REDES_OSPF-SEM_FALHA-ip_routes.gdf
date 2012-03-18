@@ -1,0 +1,213 @@
+# This file contains the IP routing tables built by various routing protocols in
+# the network model.
+
+# It is intended to be used as a mechanism whereby dynamic routing information
+# is recorded and reused to avoid running IP routing protocols in multiple
+# simulations of the same network. This feature should be used only when router
+# connectivities in the network (and hence their routing tables) do not change
+# during the course of the simulation.
+
+# This file is produced each time a simulation is run with the simulation
+# attribute "Routing Table Export/Import"  set to "Export". Multiple runs for
+# the same network model will successively overwrite this file.
+
+# The contents of this file can be imported into the network model by running a
+# simulation with the simulation attribute "Routing Table Export/Import" to 
+# "Import".
+
+# In order for this to work correctly, there should be no change in the network
+# whose simulation produced this file, and the network that is importing it
+# contents. In other words, the "Export" scenario and the "Import" scenario
+# should be the same.
+
+# Warning: Modification of this file by the user can lead to unexpected simulation
+# results.
+
+
+START_ROUTING_TABLE
+#Module Object ID, Table Size, Number of Interfaces, Route Source
+1239,5,0,2
+#Module Hierarchical Name:
+Campus Network.node_0.ip
+#Interface Information: Interface, Subinterface, IP Address, Mask
+#IP Directly Connected Networks:
+#-----------------------------------------------------------------
+#Dest Address,Subnet Mask,Next Hop,Administrative Weight
+#-----------------------------------------------------------------
+192.0.0.0,255.255.255.0,192.0.0.2,0
+192.0.1.0,255.255.255.0,192.0.1.2,0
+192.0.2.0,255.255.255.0,192.0.2.1,0
+192.0.3.0,255.255.255.0,192.0.3.1,0
+192.0.4.0,255.255.255.0,192.0.4.1,0
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID, Table Size, Number of Interfaces, Route Source
+3237,5,0,2
+#Module Hierarchical Name:
+Campus Network.node_1.ip
+#Interface Information: Interface, Subinterface, IP Address, Mask
+#IP Directly Connected Networks:
+#-----------------------------------------------------------------
+#Dest Address,Subnet Mask,Next Hop,Administrative Weight
+#-----------------------------------------------------------------
+192.0.5.0,255.255.255.0,192.0.5.2,0
+192.0.6.0,255.255.255.0,192.0.6.2,0
+192.0.7.0,255.255.255.0,192.0.7.1,0
+192.0.3.0,255.255.255.0,192.0.3.2,0
+192.0.8.0,255.255.255.0,192.0.8.1,0
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID, Table Size, Number of Interfaces, Route Source
+5235,5,0,2
+#Module Hierarchical Name:
+Campus Network.node_2.ip
+#Interface Information: Interface, Subinterface, IP Address, Mask
+#IP Directly Connected Networks:
+#-----------------------------------------------------------------
+#Dest Address,Subnet Mask,Next Hop,Administrative Weight
+#-----------------------------------------------------------------
+192.0.9.0,255.255.255.0,192.0.9.2,0
+192.0.10.0,255.255.255.0,192.0.10.2,0
+192.0.2.0,255.255.255.0,192.0.2.2,0
+192.0.11.0,255.255.255.0,192.0.11.1,0
+192.0.12.0,255.255.255.0,192.0.12.1,0
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID, Table Size, Number of Interfaces, Route Source
+7233,5,0,2
+#Module Hierarchical Name:
+Campus Network.node_3.ip
+#Interface Information: Interface, Subinterface, IP Address, Mask
+#IP Directly Connected Networks:
+#-----------------------------------------------------------------
+#Dest Address,Subnet Mask,Next Hop,Administrative Weight
+#-----------------------------------------------------------------
+192.0.13.0,255.255.255.0,192.0.13.2,0
+192.0.14.0,255.255.255.0,192.0.14.2,0
+192.0.11.0,255.255.255.0,192.0.11.2,0
+192.0.7.0,255.255.255.0,192.0.7.2,0
+192.0.15.0,255.255.255.0,192.0.15.1,0
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID,Table Size,Number of Interfaces,Is static
+4631,11,5,0
+#Module Hierarchical Name:
+Campus Network.node_2.ospf
+#Interface Information: Interface,IP Address,Mask
+0,-1,192.0.9.2,255.255.255.0
+1,-1,192.0.10.2,255.255.255.0
+10,-1,192.0.2.2,255.255.255.0
+11,-1,192.0.11.1,255.255.255.0
+12,-1,192.0.12.1,255.255.255.0
+#OSPF Routing Table Contents:
+#-----------------------------------------------------------------------------------------------------
+#Area ID,Destination,Type,Mask,Cost,Path Type,Number of Paths,Paths: (Next Hop, Advertizing Router)
+#-----------------------------------------------------------------------------------------------------
+0.0.0.0,192.0.4.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.2.1,192.0.4.1
+0.0.0.0,192.0.0.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.2.1,192.0.4.1
+0.0.0.0,192.0.1.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.2.1,192.0.4.1
+0.0.0.0,192.0.3.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.2.1,192.0.4.1
+0.0.0.0,192.0.15.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.11.2,192.0.15.1
+0.0.0.0,192.0.13.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.11.2,192.0.15.1
+0.0.0.0,192.0.14.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.11.2,192.0.15.1
+0.0.0.0,192.0.7.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.11.2,192.0.15.1
+0.0.0.0,192.0.8.0,Network,255.255.255.0,46,INTRA-AREA,2,192.0.2.1,192.0.8.1,192.0.11.2,192.0.8.1
+0.0.0.0,192.0.5.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.2.1,192.0.8.1,192.0.11.2,192.0.8.1
+0.0.0.0,192.0.6.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.2.1,192.0.8.1,192.0.11.2,192.0.8.1
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID,Table Size,Number of Interfaces,Is static
+635,11,5,0
+#Module Hierarchical Name:
+Campus Network.node_0.ospf
+#Interface Information: Interface,IP Address,Mask
+0,-1,192.0.0.2,255.255.255.0
+1,-1,192.0.1.2,255.255.255.0
+10,-1,192.0.2.1,255.255.255.0
+11,-1,192.0.3.1,255.255.255.0
+12,-1,192.0.4.1,255.255.255.0
+#OSPF Routing Table Contents:
+#-----------------------------------------------------------------------------------------------------
+#Area ID,Destination,Type,Mask,Cost,Path Type,Number of Paths,Paths: (Next Hop, Advertizing Router)
+#-----------------------------------------------------------------------------------------------------
+0.0.0.0,192.0.12.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.2.2,192.0.12.1
+0.0.0.0,192.0.9.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.2.2,192.0.12.1
+0.0.0.0,192.0.10.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.2.2,192.0.12.1
+0.0.0.0,192.0.11.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.2.2,192.0.12.1
+0.0.0.0,192.0.15.0,Network,255.255.255.0,46,INTRA-AREA,2,192.0.3.2,192.0.15.1,192.0.2.2,192.0.15.1
+0.0.0.0,192.0.13.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.3.2,192.0.15.1,192.0.2.2,192.0.15.1
+0.0.0.0,192.0.14.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.3.2,192.0.15.1,192.0.2.2,192.0.15.1
+0.0.0.0,192.0.7.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.3.2,192.0.15.1
+0.0.0.0,192.0.8.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.3.2,192.0.8.1
+0.0.0.0,192.0.5.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.3.2,192.0.8.1
+0.0.0.0,192.0.6.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.3.2,192.0.8.1
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID,Table Size,Number of Interfaces,Is static
+6629,11,5,0
+#Module Hierarchical Name:
+Campus Network.node_3.ospf
+#Interface Information: Interface,IP Address,Mask
+0,-1,192.0.13.2,255.255.255.0
+1,-1,192.0.14.2,255.255.255.0
+10,-1,192.0.11.2,255.255.255.0
+11,-1,192.0.7.2,255.255.255.0
+12,-1,192.0.15.1,255.255.255.0
+#OSPF Routing Table Contents:
+#-----------------------------------------------------------------------------------------------------
+#Area ID,Destination,Type,Mask,Cost,Path Type,Number of Paths,Paths: (Next Hop, Advertizing Router)
+#-----------------------------------------------------------------------------------------------------
+0.0.0.0,192.0.12.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.11.1,192.0.12.1
+0.0.0.0,192.0.9.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.11.1,192.0.12.1
+0.0.0.0,192.0.10.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.11.1,192.0.12.1
+0.0.0.0,192.0.2.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.11.1,192.0.12.1
+0.0.0.0,192.0.4.0,Network,255.255.255.0,46,INTRA-AREA,2,192.0.11.1,192.0.4.1,192.0.7.1,192.0.4.1
+0.0.0.0,192.0.0.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.11.1,192.0.4.1,192.0.7.1,192.0.4.1
+0.0.0.0,192.0.1.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.11.1,192.0.4.1,192.0.7.1,192.0.4.1
+0.0.0.0,192.0.3.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.7.1,192.0.4.1
+0.0.0.0,192.0.8.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.7.1,192.0.8.1
+0.0.0.0,192.0.5.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.7.1,192.0.8.1
+0.0.0.0,192.0.6.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.7.1,192.0.8.1
+END_ROUTING_TABLE
+
+
+START_ROUTING_TABLE
+#Module Object ID,Table Size,Number of Interfaces,Is static
+2633,11,5,0
+#Module Hierarchical Name:
+Campus Network.node_1.ospf
+#Interface Information: Interface,IP Address,Mask
+0,-1,192.0.5.2,255.255.255.0
+1,-1,192.0.6.2,255.255.255.0
+10,-1,192.0.7.1,255.255.255.0
+11,-1,192.0.3.2,255.255.255.0
+12,-1,192.0.8.1,255.255.255.0
+#OSPF Routing Table Contents:
+#-----------------------------------------------------------------------------------------------------
+#Area ID,Destination,Type,Mask,Cost,Path Type,Number of Paths,Paths: (Next Hop, Advertizing Router)
+#-----------------------------------------------------------------------------------------------------
+0.0.0.0,192.0.12.0,Network,255.255.255.0,46,INTRA-AREA,2,192.0.3.1,192.0.12.1,192.0.7.2,192.0.12.1
+0.0.0.0,192.0.9.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.3.1,192.0.12.1,192.0.7.2,192.0.12.1
+0.0.0.0,192.0.10.0,Network,255.255.255.0,56,INTRA-AREA,2,192.0.3.1,192.0.12.1,192.0.7.2,192.0.12.1
+0.0.0.0,192.0.2.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.3.1,192.0.12.1
+0.0.0.0,192.0.11.0,Network,255.255.255.0,46,INTRA-AREA,1,192.0.7.2,192.0.12.1
+0.0.0.0,192.0.4.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.3.1,192.0.4.1
+0.0.0.0,192.0.0.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.3.1,192.0.4.1
+0.0.0.0,192.0.1.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.3.1,192.0.4.1
+0.0.0.0,192.0.15.0,Network,255.255.255.0,23,INTRA-AREA,1,192.0.7.2,192.0.15.1
+0.0.0.0,192.0.13.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.7.2,192.0.15.1
+0.0.0.0,192.0.14.0,Network,255.255.255.0,33,INTRA-AREA,1,192.0.7.2,192.0.15.1
+END_ROUTING_TABLE
+

@@ -1,0 +1,9 @@
+.directory
+*.out
+*.tr
+*.q
+*.a
+*.queue
+*.nam
+*.pdf
+*~

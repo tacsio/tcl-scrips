@@ -1,0 +1,92 @@
+# 
+# Purpose:   Contains IP address information for all active 
+#            interfaces in the current network model.
+#            (created by exporting this information from the model.)
+# 
+
+# Node Name: Campus Network.net1
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.0.1        255.255.255.0    Campus Network.net1 <-> node_0
+
+
+# Node Name: Campus Network.net2
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.1.1        255.255.255.0    Campus Network.net2 <-> node_0
+
+
+# Node Name: Campus Network.node_0
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.0.2        255.255.255.0    Campus Network.net1 <-> node_0
+   IF1                      1             192.0.1.2        255.255.255.0    Campus Network.net2 <-> node_0
+   IF10                     10            192.0.2.1        255.255.255.0    Campus Network.node_0 <-> node_2
+   IF11                     11            192.0.3.1        255.255.255.0    Campus Network.node_1 <-> node_0
+   Loopback                 12            192.0.4.1        255.255.255.0    Not connected to any link.
+
+
+# Node Name: Campus Network.net3
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.5.1        255.255.255.0    Campus Network.net3 <-> node_1
+
+
+# Node Name: Campus Network.net4
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.6.1        255.255.255.0    Campus Network.net4 <-> node_1
+
+
+# Node Name: Campus Network.node_1
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.5.2        255.255.255.0    Campus Network.net3 <-> node_1
+   IF1                      1             192.0.6.2        255.255.255.0    Campus Network.net4 <-> node_1
+   IF10                     10            192.0.7.1        255.255.255.0    Campus Network.node_3 <-> node_1
+   IF11                     11            192.0.3.2        255.255.255.0    Campus Network.node_1 <-> node_0
+   Loopback                 12            192.0.8.1        255.255.255.0    Not connected to any link.
+
+
+# Node Name: Campus Network.net5
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.9.1        255.255.255.0    Campus Network.net5 <-> node_2
+
+
+# Node Name: Campus Network.net6
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.10.1       255.255.255.0    Campus Network.net6 <-> node_2
+
+
+# Node Name: Campus Network.node_2
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.9.2        255.255.255.0    Campus Network.net5 <-> node_2
+   IF1                      1             192.0.10.2       255.255.255.0    Campus Network.net6 <-> node_2
+   IF10                     10            192.0.2.2        255.255.255.0    Campus Network.node_0 <-> node_2
+   IF11                     11            192.0.11.1       255.255.255.0    Campus Network.node_2 <-> node_3
+   Loopback                 12            192.0.12.1       255.255.255.0    Not connected to any link.
+
+
+# Node Name: Campus Network.net7
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.13.1       255.255.255.0    Campus Network.net7 <-> node_3
+
+
+# Node Name: Campus Network.net8
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.14.1       255.255.255.0    Campus Network.net8 <-> node_3
+
+
+# Node Name: Campus Network.node_3
+#  Iface Name            Iface Index   IP Address       Subnet Mask      Connected Link
+#  ----------            -----------   ---------------  ---------------  ----------------
+   IF0                      0             192.0.13.2       255.255.255.0    Campus Network.net7 <-> node_3
+   IF1                      1             192.0.14.2       255.255.255.0    Campus Network.net8 <-> node_3
+   IF10                     10            192.0.11.2       255.255.255.0    Campus Network.node_2 <-> node_3
+   IF11                     11            192.0.7.2        255.255.255.0    Campus Network.node_3 <-> node_1
+   Loopback                 12            192.0.15.1       255.255.255.0    Not connected to any link.
